@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 types = {
 
     'audio': ['.wpl', '.wma', '.wav', '.ogg', '.mpa', '.mp3', '.mid', '.midi', '.cda', '.aif'],
@@ -55,3 +56,6 @@ locations = {
 }
 
 docs = ['doc-spreadsheet', 'doc-presentation', 'doc-word', 'doc-pdf']
+
+working_directories = ["/home/hama/Downloads/", "/home/hama/Documents/", "/home/hama/Codes/",
+                       "/home/hama/Desktop/", "/home/hama/Music/", "/home/hama/Pictures/", "/home/hama/Videos/"]
