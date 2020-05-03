@@ -2,6 +2,8 @@
 A project to automate file organization in Linux using Python.
 The project is built due to my laziness to move files into their specific directories. ;)
 
+Works only on files not directories (I don't usually have them and when I do, I want to do it personally).
+
 Used Language:
   Python.
 
