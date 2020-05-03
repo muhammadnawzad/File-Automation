@@ -26,15 +26,15 @@ class FileOrganizer:
 
         return os.path.join(root, file_name)
 
-    def extention_finder(self, path):
+    def extension_finder(self, path):
         """(str) -> str
 
         Takes in a string of full path of a file. If exists,
-        returns a string of its extention, else returns False.
+        returns a string of its extension, else returns False.
 
-        >>> extention_finder("/home/hama/Downloads/area.cpp")
+        >>> extension_finder("/home/hama/Downloads/area.cpp")
         ".cpp"
-        >>> extention_finder("/home/hama/Downloads/FuzzBuzz.py")
+        >>> extension_finder("/home/hama/Downloads/FuzzBuzz.py")
         ".py"
         """
 
@@ -43,13 +43,13 @@ class FileOrganizer:
                 return os.path.splitext(path)[1]
         return False
 
-    def category_selector(self, extention):
+    def category_selector(self, extension):
         """(str) -> str
 
-        Takes in a string of an extention of a file. If not False,
-        returns the category of the extention, else returns False.
+        Takes in a string of an extension of a file. If not False,
+        returns the category of the extension, else returns False.
 
-        Precondition: The extention must be in one of the categories.
+        Precondition: The extension must be in one of the categories.
 
         >>> category_selector(".cpp")
         "programming-files"
@@ -57,9 +57,9 @@ class FileOrganizer:
         "video"
         """
 
-        if extention != False:
+        if extension != False:
             for category in types:
-                if extention in types[category]:
+                if extension in types[category]:
                     return category
                     break
             return False
@@ -80,7 +80,7 @@ class FileOrganizer:
         """
 
         prefix = os.path.basename(path)
-        if self.category_selector(self.extention_finder(path)) not in docs:
+        if self.category_selector(self.extension_finder(path)) not in docs:
             return prefix[:2]
         else:
             return prefix[:3]
@@ -101,7 +101,7 @@ class FileOrganizer:
         """
 
         file_name = os.path.basename(path)
-        if self.category_selector(self.extention_finder(path)) not in docs:
+        if self.category_selector(self.extension_finder(path)) not in docs:
             return file_name[2:]
         else:
             return file_name[3:]
@@ -119,8 +119,8 @@ class FileOrganizer:
         """
 
         file_name = os.path.splitext(path)[0]
-        extention = os.path.splitext(path)[1]
-        return f"""{file_name}-{randint(1, 250) % randint(1, 250)}{extention}"""
+        extension = os.path.splitext(path)[1]
+        return f"""{file_name}-{randint(1, 250) % randint(1, 250)}{extension}"""
 
     def copy(self, file_source, destination_root):
         """(str, str) -> str
@@ -171,7 +171,7 @@ while True:
                 current_file = file
 
                 file_category = path.category_selector(
-                    path.extention_finder(current_file))
+                    path.extension_finder(current_file))
                 if file_category in locations:
                     if locations[file_category].get(path.get_prefix(current_file)) != None:
                         destination_root = locations[file_category].get(
