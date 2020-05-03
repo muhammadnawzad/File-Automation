@@ -200,7 +200,5 @@ while True:
 
         time.sleep(5)
 
-    time.sleep(30)
-    
 # By: Muhammad Nawzad Abdullah
 # Software Engineer to be.
