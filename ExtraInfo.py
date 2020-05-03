@@ -3,8 +3,6 @@ types = {
 
     'audio': ['.wpl', '.wma', '.wav', '.ogg', '.mpa', '.mp3', '.mid', '.midi', '.cda', '.aif'],
 
-    # 'Compressed': ['.7z', '.arj', '.deb', '.pkg', '.rar', '.rpm', '.tar.gz', '.z', '.zip', '.iso'],
-
     'database': ['.csv', '.dat', '.db', '.dbf', 'log', '.mdb', '.sav', 'sqlite', '.sql', '.tar', '.xml'],
 
     'fonts': ['.fnt', '.fon', '.otf', '.ttf'],
@@ -21,17 +19,17 @@ types = {
 
     'video': ['.3g2', '.3gp', '.avi', '.flv', '.h264', '.264', '.m4v', '.mkv', '.mov', '.mp4', '.mpg', '.mpeg', '.rm', '.swf', '.vob', '.wmv'],
 
-    'doc-word': ['.doc', '.docx', '.odt', '.rtf', '.tex', '.txt', '.wpd'],
+    'doc-word': ['.doc', '.docx', '.odt', '.rtf', '.tex', '.wpd'],
 
-    'doc-pdf': ['.pdf', '.epub', '.mobi']
+    'doc-pdf': ['.pdf', '.epub', '.mobi'],
+
+    'text': ['.txt']
 
 }
 
 locations = {
 
     'audio': {'na': '/home/hama/Music/Others'},
-
-    # 'Compressed': {'na': "/home/hama/Documents/Others/System-Related-&-Compressed-Files"},
 
     'database': {'na': '/home/hama/Documents/Others/Database'},
 
@@ -53,6 +51,7 @@ locations = {
 
     'doc-pdf': {'bop': "/home/hama/Documents/Books/Programming-Books", 'bon': "/home/hama/Documents/Books/Novels", 'boo': "/home/hama/Documents/Books/Others", 'duc': "/home/hama/Documents/Documents/PDF", 'tmp': "/home/hama/Documents/Temp", 'uot': "/home/hama/Documents/UKH/Undergraduate-I/Other-Documents", 'uma': "/home/hama/Documents/UKH/Undergraduate-I/Semester-II/Engineering-Mathematics-II", 'udl': "/home/hama/Documents/UKH/Undergraduate-I/Semester-II/Introduction-to-Digital-Logic-&-Electronics", 'usp': "/home/hama/Documents/UKH/Undergraduate-I/Semester-II/Structured-Programming", 'uen': "/home/hama/Documents/UKH/Undergraduate-I/Semester-II/English-Composition-II"},
 
+    'text': {'tx': "/home/hama/Documents/Documents/PDF"}
 }
 
 docs = ['doc-spreadsheet', 'doc-presentation', 'doc-word', 'doc-pdf']
